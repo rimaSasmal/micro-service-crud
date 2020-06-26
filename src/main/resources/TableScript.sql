@@ -1,4 +1,4 @@
-DROP TABLE Card CASCADE CONSTRAINTS;
+DROP TABLE Account CASCADE CONSTRAINTS;
 DROP TABLE Customer CASCADE CONSTRAINTS;
 DROP SEQUENCE hibernate_sequence;
 CREATE SEQUENCE hibernate_sequence start with 1006 increment by  1;
@@ -23,8 +23,8 @@ CREATE TABLE Account (
   creation_date date,
   balance number(10),
   cust_id number(10),
-  CONSTRAINT card_pk2 PRIMARY KEY (card_id),
-  CONSTRAINT fk_card_cust2 FOREIGN KEY (cust_id) REFERENCES Customer
+  CONSTRAINT acc_pk PRIMARY KEY (ac_id),
+  CONSTRAINT fk_ac_cust FOREIGN KEY (cust_id) REFERENCES Customer
 );
 
 

@@ -63,7 +63,22 @@ public class REST_CRUD_T1_Application {
 			accounts.add(acDetails2);
 
 			customer.setAccounts(accounts);
-
+			
+			************************************************************
+							{
+				    "emailId": "rima@infy.com",
+				    "name": "Rima Sasmal",
+				    "dateOfBirth": "1997-09-12",
+				    "accounts": [
+				        {
+				            "acId": 12223,
+				            "acNumber": "6642160005019993",
+				            "creationDate": "2011-03-05",
+				            "balance": 20000
+				        }
+				    ]
+				}
+		*******************************************************************
 			accountCustomerService.addCustomer(customer);
 			System.out.println("\n" + environment.getProperty("UserInterface.ACCOUNT_AND_CUSTOMER_ADDED"));
 
@@ -128,6 +143,22 @@ public class REST_CRUD_T1_Application {
 		}
 
 	}
+
+
+*********************************************************
+*  						 {
+				            "acId": 19954,
+				            "acNumber": "6642160005019993",
+				            "creationDate": "2011-03-05",
+				            "balance": 20000
+				        }
+*
+*
+*
+*
+*
+**********************************************************
+
 
 	
 	public void deleteAccountOfExistingCustomer() {
