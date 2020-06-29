@@ -63,10 +63,10 @@ public class AccountCustomerAPI {
     @PostMapping(value = "/customer")
 	public ResponseEntity<String> addCustomer(@RequestBody Customer customer) throws Exception  {
     	try {
-    	accountCustomerService.addCustomer(customer);
+    	Integer custId=accountCustomerService.addCustomer(customer);
 		System.out.println("\n" + environment.getProperty("UserInterface.ACCOUNT_AND_CUSTOMER_ADDED"));
 		String successMessage = "Customer added successfully";
-		ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.CREATED);
+		ResponseEntity<String> response = new ResponseEntity<String>(successMessage+"with customer id : "+custId, HttpStatus.CREATED);
 		return response;
     	}
     	catch(Exception e) {

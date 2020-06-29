@@ -14,7 +14,7 @@ public class LoggingAspect {
 
 	private Logger logger=LogManager.getLogger(this.getClass());
 
-	@AfterThrowing(pointcut = "execution(* com.infy.dao.*Impl.*(..))", throwing = "exception")	
+	@AfterThrowing(pointcut = "execution(* com.infy.dao.*DAO.*(..))", throwing = "exception")	
 	public void logExceptionFromDAO(Exception exception) throws Exception {
 		logger.error(exception.getMessage(), exception);
 
